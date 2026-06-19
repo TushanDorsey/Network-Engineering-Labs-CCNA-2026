@@ -18,7 +18,13 @@ Both locations are connected through the internet while implementing different n
 
 ## Network Topology
 
-![Network Topology](topology.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/main/Day-01-Network-Devices.png.png" alt="Day 01 Network Devices Lab" width="1000">
+</p>
+
+<p align="center">
+  Enterprise topology consisting of a New York branch, Tokyo branch, perimeter firewalls, routers, switches, servers, workstations, and an external attacker simulation.
+</p>
 
 ---
 
