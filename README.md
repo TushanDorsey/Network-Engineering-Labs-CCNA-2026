@@ -85,7 +85,7 @@ Throughout this journey, I will be working through Jeremy's IT Lab CCNA course w
 | Day    | Topic                                 | Status        |
 | ------ | ------------------------------------- | ------------- |
 | Day 01 | Network Devices & Enterprise Topology | ✅ Complete    |
-| Day 02 | OSI Model                             | ⏳ In Progress |
+| Day 02 | OSI Model                             | ✅ Complete |
 | Day 03 | TCP/IP Suite                          | ⏳ Planned     |
 | Day 04 | Ethernet LAN Switching                | ⏳ Planned     |
 | Day 05 | IPv4 Addressing                       | ⏳ Planned     |
