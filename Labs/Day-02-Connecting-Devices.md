@@ -30,7 +30,9 @@ Topics covered:
 
 ## Network Topology
 
-![Day 02 Network Topology](Day-02-Connecting-Devices.png)
+<p align="center">
+  <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-02-Connecting-Devices.png" alt="Day 01 Network Devices Lab" width="1000">
+</p>
 
 ---
 
