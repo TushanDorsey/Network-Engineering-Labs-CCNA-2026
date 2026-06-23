@@ -19,7 +19,7 @@ Both locations are connected through the internet while implementing different n
 ## Network Topology
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/main/Day-01-Network-Devices.png.png" alt="Day 01 Network Devices Lab" width="1000">
+  <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-01-Network-Devices.png" alt="Day 01 Network Devices Lab" width="1000">
 </p>
 
 <p align="center">
