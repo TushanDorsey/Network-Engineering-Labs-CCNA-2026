@@ -12,7 +12,13 @@ Rather than simply memorizing the seven layers of the OSI Model, this lab focuse
 
 ## Network Topology
 
-![OSI Model Lab](Day-03-OSI-Model-1.png) ![OSI Model Lab](Day-03-OSI-Model-2.png)
+<p align="center">
+  <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-03-OSI-Model-1.png" alt="" width="1000">
+</p>
+<p align="center">
+  <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-03-OSI-Model-2.png" alt="" width="1000">
+</p>
+
 
 ---
 
