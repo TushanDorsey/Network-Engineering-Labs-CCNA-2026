@@ -84,8 +84,8 @@ Throughout this journey, I will be working through Jeremy's IT Lab CCNA course w
 
 | Day    | Topic                                 | Status        |
 | ------ | ------------------------------------- | ------------- |
-| Day 01 | Network Devices & Enterprise Topology | ✅ Complete    |
-| Day 02 | OSI Model                             | ✅ Complete |
+| Day 01 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Day-01-Network-Devices.md">Network Devices & Enterprise Topology</a> | ✅ Complete    |
+| Day 02 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Day-02-Connecting-Devices.md">Connecting Network Devices</a> | ✅ Complete |
 | Day 03 | TCP/IP Suite                          | ⏳ Planned     |
 | Day 04 | Ethernet LAN Switching                | ⏳ Planned     |
 | Day 05 | IPv4 Addressing                       | ⏳ Planned     |
