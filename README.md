@@ -87,10 +87,10 @@ Throughout this journey, I will be working through Jeremy's IT Lab CCNA course w
 | Day 01 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Day-01-Network-Devices.md">Network Devices & Enterprise Topology</a> | ✅ Complete    |
 | Day 02 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Day-02-Connecting-Devices.md">Connecting Network Devices</a> | ✅ Complete |
 | Day 03 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Day-03-OSI-Model-DHCP-Packet-Analysis.md">OSI Model DHCP & PacketAnalysis</a> | ✅ Complete    |
-| Day 04 | Ethernet LAN Switching                | ⏳ Planned     |
-| Day 05 | IPv4 Addressing                       | ⏳ Planned     |
-| Day 06 | Subnetting Part 1                     | ⏳ Planned     |
-| Day 07 | Subnetting Part 2                     | ⏳ Planned     |
+| Day 04 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-04-Basic-Device-Security.md">Basic Device Security</a>    | ✅ Complete     |
+| Day 05/06 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-06-Ethernet-LAN-Switching-1.md">Ethernet & LANSwitching</a>    |  ✅ Complete     |
+| Day 07 | IPv4 Addressing                     | ⏳ Planned     |
+| Day 08 | Subnetting Part 2                     | ⏳ Planned     |
 
 ---
 
