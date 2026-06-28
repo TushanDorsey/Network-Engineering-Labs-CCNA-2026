@@ -89,8 +89,8 @@ Throughout this journey, I will be working through Jeremy's IT Lab CCNA course w
 | Day 03 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Day-03-OSI-Model-DHCP-Packet-Analysis.md">OSI Model DHCP & PacketAnalysis</a> | ✅ Complete    |
 | Day 04 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-04-Basic-Device-Security.md">Basic Device Security</a>    | ✅ Complete     |
 | Day 05/06 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-06-Ethernet-LAN-Switching-1.md">Ethernet & LANSwitching</a>    |  ✅ Complete     |
-| Day 07 | IPv4 Addressing                     | ⏳ Planned     |
-| Day 08 | Subnetting Part 2                     | ⏳ Planned     |
+| Day 07/08 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-08-Lab-IPv4-Addresses-6.md">IPv4 Addresses</a>   | ✅ Complete     |
+| Day 09 |                      | ⏳ Planned     |
 
 ---
 
