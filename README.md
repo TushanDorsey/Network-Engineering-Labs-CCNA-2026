@@ -91,9 +91,9 @@ Throughout this journey, I will be working through Jeremy's IT Lab CCNA course w
 | Day 05/06 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-06-Ethernet-LAN-Switching-1.md">Ethernet & LANSwitching</a>    |  ✅ Complete     |
 | Day 07/08 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-08-Lab-IPv4-Addresses-6.md">IPv4 Addresses</a>   | ✅ Complete     |
 | Day 09 |<a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-09-Interface-configuration-%26-Device-Managment.md">Interface configuration & Device Managment</a>|✅ Complete|
-| Day 10 | <a href="TBD"></a> | TBD   |
-| Day x | <a href="TBD"></a> | TBD   |
-| Day x | <a href="TBD"></a> | TBD   |
+| Day 11.1 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-11.1-Lab-Configuring-Static-Routes.md">Configuring Static Routes</a> | ✅ Complete |
+| Day 11.2 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-11.2%20%E2%80%93Troubleshooting-Static-Routes.md">Troubleshooting Static Routes</a> | ✅ Complete |
+| Day 15 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-15-Lab-VLSM.md">VLSM & Static Routing</a> | ✅ Complete |
 | Day x | <a href="TBD"></a> | TBD   |
 | Day x | <a href="TBD"></a> | TBD   |
 | Day x | <a href="TBD"></a> | TBD   |
