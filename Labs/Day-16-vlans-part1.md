@@ -1,12 +1,12 @@
-# Day 16 - VLANs Part 1: Configuration and Trunking
+# Day 16 - VLANs Part 1: Configuration and Inter-VLAN Routing
 
 ## Overview
 
 Today's CCNA lab focused on **VLANs**, or Virtual Local Area Networks.
 
-The objective was to create and assign VLANs on a single switch, verify the VLAN database, configure trunk links, and test inter-VLAN communication behavior.
+The objective was to segment devices into three VLANs, assign gateways using the last usable address of each subnet, configure router interfaces for inter-VLAN routing, and verify connectivity with ping and broadcast tests.
 
-This lab combined switch VLAN configuration, access port assignment, trunk configuration, router-on-a-stick sub-interfaces, default gateway setup, and broadcast domain verification.
+This lab combined PC IP configuration, router interface configuration, switch VLAN creation, port assignment, inter-VLAN routing verification, and broadcast domain analysis.
 
 ---
 
@@ -22,208 +22,134 @@ This lab combined switch VLAN configuration, access port assignment, trunk confi
 
 ## Lab Objectives
 
-* Create VLANs on SW1
-* Name VLANs: Engineering, HR, Sales
-* Assign access ports to VLANs
-* Configure trunk link between SW1 and R1
-* Configure router-on-a-stick sub-interfaces
-* Assign IP addresses to router sub-interfaces
-* Configure PC default gateways
-* Verify VLAN database
-* Test inter-VLAN connectivity
-* Verify broadcast domain behavior with ping tests
+* Configure PCs with IP addresses, subnet masks, and default gateways
+* Set gateways as the **last usable address** of each VLAN subnet
+* Connect R1 to SW1 with three physical links
+* Configure one router interface per VLAN
+* Create and name VLANs on SW1
+* Assign switch ports to proper VLANs
+* Verify connectivity with ping and broadcast tests
 
 ---
 
 ## VLAN Requirements
 
-| VLAN | Name       | Subnet          | Gateway        | Hosts           |
-| ---- | ---------- | --------------- | -------------- | --------------- |
-| 10   | Engineering | 10.0.0.0/26     | 10.0.0.62      | PC1, PC2        |
-| 20   | HR         | 10.0.0.64/26    | 10.0.0.126     | PC3, PC4        |
-| 30   | Sales      | 10.0.0.128/26   | 10.0.0.190     | PC5, PC6        |
+| VLAN    | Name       | Subnet          | Gateway      | Hosts          |
+| ------- | ---------- | --------------- | ------------ | -------------- |
+| VLAN 10 | Engineering | 10.0.0.0/26     | 10.0.0.62    | PC1, PC2       |
+| VLAN 20 | HR         | 10.0.0.64/26    | 10.0.0.126   | PC3, PC4       |
+| VLAN 30 | Sales      | 10.0.0.128/26   | 10.0.0.190   | PC5, PC6       |
 
 ---
 
-## Step 1 - Configure VLANs on SW1
+## Step 1 - Configure PCs with IP Addresses and Gateways
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.1.png" alt="VLAN Configuration">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.1.png" alt="PC1, PC2, and PC3 Configuration">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.2.png" alt="PC2 IP Configuration Verification">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.3.png" alt="Topology with Lab Instructions">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.5.png" alt="PC5 IP Configuration">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.6.png" alt="PC6 IP Configuration">
   </a>
 </p>
 
-VLANs were created and named on SW1 using VLAN database configuration mode.
+Each PC received its VLAN IP, mask 255.255.255.192, and a default gateway set to the **last usable address** of its subnet.
 
-Commands used included:
+Assignments:
+- PC1: 10.0.0.1, gateway 10.0.0.62
+- PC2: 10.0.0.2, gateway 10.0.0.62
+- PC3: 10.0.0.65, gateway 10.0.0.126
+- PC4: 10.0.0.66, gateway 10.0.0.126
+- PC5: 10.0.0.129, gateway 10.0.0.190
+- PC6: 10.0.0.130, gateway 10.0.0.190
+
+The -1.1 screenshot shows the initial PC configuration. The later -1.x screenshots verify each PC's completed IP addressing and show the lab topology/instructions.
+
+---
+
+## Step 2 - Configure R1 Interfaces
+
+<p align="center">
+  <a href="PASTE-IMAGE-LINK-HERE">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-2.png" alt="R1 Interface Configuration">
+  </a>
+</p>
+
+R1 was configured with one physical interface per VLAN to provide inter-VLAN routing.
+
+```cisco
+interface gigabitEthernet 0/0
+ ip address 10.0.0.62 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet 0/1
+ ip address 10.0.0.126 255.255.255.192
+ no shutdown
+
+interface gigabitEthernet 0/2
+ ip address 10.0.0.190 255.255.255.192
+ no shutdown
+```
+
+All three interfaces reached `up/up` after configuration.
+
+---
+
+## Step 3 - Configure SW1 VLANs and Ports
+
+<p align="center">
+  <a href="PASTE-IMAGE-LINK-HERE">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-3.png" alt="SW1 VLAN Database">
+  </a>
+</p>
+
+VLANs were created and named on SW1.
 
 ```cisco
 vlan 10
  name Engineering
+
 vlan 20
  name HR
+
 vlan 30
  name Sales
 ```
 
----
-
-## Step 2 - Configure Access Ports on SW1
-
-<p align="center">
-  <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.2.png" alt="Access Port Configuration">
-  </a>
-</p>
-
-Switch ports connecting to PCs were configured as access ports and assigned to their respective VLANs.
-
-```cisco
-interface fastEthernet 3/1
- switchport mode access
- switchport access vlan 10
-
-interface fastEthernet 4/1
- switchport mode access
- switchport access vlan 20
-
-interface fastEthernet 8/1
- switchport mode access
- switchport access vlan 30
-```
+Ports were assigned to their VLANs in access mode.
 
 ---
 
-## Step 3 - Configure Trunk Port on SW1
+## Step 4 - Verify Connectivity and Broadcast Behavior
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.3.png" alt="Trunk Port Configuration">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-4.1.png" alt="Ping Tests">
   </a>
 </p>
 
-The uplink port to the router was configured as a trunk to carry multiple VLANs.
-
-```cisco
-interface gigabitEthernet 0/1
- switchport mode trunk
- switchport trunk allowed vlan 10,20,30
-```
+Inter-VLAN pings succeeded. One ping to 10.0.0.189 timed out, while pings to 10.0.0.130 and 10.0.0.65 succeeded.
 
 ---
 
-## Step 4 - Configure Router-on-a-Stick Sub-interfaces
-
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.4.png" alt="Router Sub-interfaces">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-4.2.png" alt="Broadcast Domain Verification">
   </a>
 </p>
 
-R1 was configured with sub-interfaces for each VLAN using 802.1q encapsulation.
-
-```cisco
-interface gigabitEthernet 0/0.10
- encapsulation dot1Q 10
- ip address 10.0.0.62 255.255.255.192
-
-interface gigabitEthernet 0/1.20
- encapsulation dot1Q 20
- ip address 10.0.0.126 255.255.255.192
-
-interface gigabitEthernet 2/2.30
- encapsulation dot1Q 30
- ip address 10.0.0.190 255.255.255.192
-```
-
----
-
-## Step 5 - Configure PC IP Addresses and Gateways
-
-<p align="center">
-  <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-1.5.png" alt="PC IP Configuration">
-  </a>
-</p>
-
-Each PC was assigned an IP address, subnet mask, and default gateway.
-
-| PC    | VLAN    | IP Address    | Subnet Mask      | Default Gateway |
-| ----- | ------- | ------------- | ---------------- | --------------- |
-| PC1   | VLAN 10 | 10.0.0.1      | 255.255.255.192  | 10.0.0.62       |
-| PC2   | VLAN 10 | 10.0.0.2      | 255.255.255.192  | 10.0.0.62       |
-| PC3   | VLAN 20 | 10.0.0.65     | 255.255.255.192  | 10.0.0.126      |
-| PC4   | VLAN 20 | 10.0.0.66     | 255.255.255.192  | 10.0.0.126      |
-| PC5   | VLAN 30 | 10.0.0.129    | 255.255.255.192  | 10.0.0.190      |
-| PC6   | VLAN 30 | 10.0.0.130    | 255.255.255.192  | 10.0.0.190      |
-
----
-
-## Step 6 - Verify VLAN Database
-
-<p align="center">
-  <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-2.png" alt="VLAN Database Verification">
-  </a>
-</p>
-
-VLAN membership was verified using:
-
-```cisco
-show vlan brief
-```
-
----
-
-## Step 7 - Verify Inter-VLAN Connectivity
-
-<p align="center">
-  <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-3.png" alt="Inter-VLAN Ping Test">
-  </a>
-</p>
-
-Ping tests confirmed successful communication between VLANs via the router.
-
----
-
-## Step 8 - Verify Broadcast Domain Behavior
-
-<p align="center">
-  <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-4.1.png" alt="Broadcast Domain Verification">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-4.2.png" alt="Broadcast Ping Results">
-  </a>
-</p>
-
-A broadcast ping to 10.0.0.63 confirmed that broadcast traffic stays within the local VLAN unless routed.
-
-Results showed TTL values:
-- TTL=255: Cisco router/gateway
-- TTL=128: Windows PC/host
-
----
-
-## Step 9 - Verify Trunk Configuration
-
-<p align="center">
-  <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day%2016%20Lab%20-%20VLANs%20(Part%201)-4.2.png" alt="Trunk Verification">
-  </a>
-</p>
-
-Trunk status was verified using:
-
-```cisco
-show interfaces trunk
-```
+Broadcast traffic stayed inside VLAN 10 and was not forwarded into VLAN 20 or VLAN 30. This confirms each VLAN is a separate broadcast domain.
 
 ---
 
 ## Commands Practiced
 
 ```cisco
-vlan database
+interface gigabitEthernet <number>
+ ip address <address> <mask>
+ no shutdown
+
 vlan <id>
  name <name>
 
@@ -231,16 +157,7 @@ interface <type> <number>
  switchport mode access
  switchport access vlan <id>
 
-interface <type> <number>
- switchport mode trunk
- switchport trunk allowed vlan <list>
-
-interface <type> <number>.<subif>
- encapsulation dot1Q <vlan-id>
- ip address <address> <mask>
-
 show vlan brief
-show interfaces trunk
 show ip interface brief
 ping
 ipconfig
@@ -251,24 +168,26 @@ ipconfig
 ## Skills Practiced
 
 * VLAN creation and naming
-* Access port assignment
-* Trunk configuration
-* Router-on-a-stick sub-interfaces
-* 802.1q encapsulation
-* Default gateway configuration
-* Broadcast domain verification
-* Ping and connectivity testing
-* TTL analysis
+* Router interface configuration for each VLAN
+* Switch port VLAN assignment
+* PC IP and gateway configuration
+* Inter-VLAN connectivity verification
+* Broadcast domain behavior analysis
+* TTL interpretation
 
 ---
 
 ## What I Learned
 
-This lab helped me understand how VLANs segment broadcast domains and how trunk links carry multiple VLANs between switches and routers.
+This lab showed that VLANs create separate broadcast domains and a router can provide inter-VLAN routing using one physical interface per VLAN, without trunking.
 
-The key insight was that a broadcast ping stays within the local VLAN unless the router routes it. Before configuring trunks and sub-interfaces, connectivity was 100% loss. After proper VLAN, access port, trunk, and router configuration, full inter-VLAN connectivity was achieved.
+Key observations:
+- Gateway = last usable address of the subnet
+- Each VLAN needs its own router interface on the same subnet
+- Router forwards unicast between VLANs
+- Router does not forward broadcast between VLANs
 
-The router-on-a-stick configuration uses sub-interfaces with `encapsulation dot1Q` to tag traffic for each VLAN, allowing a single physical router interface to route between multiple VLANs.
+Before configuring router interfaces, pings between VLANs failed. After adding the three router interfaces and assigning gateways, inter-VLAN communication was successful and broadcast behavior was constrained to the local VLAN.
 
 ---
 
@@ -280,11 +199,11 @@ The router-on-a-stick configuration uses sub-interfaces with `encapsulation dot1
 
 * VLANs
 * Access Ports
-* Trunking
-* 802.1q Encapsulation
-* Router-on-a-Stick
-* Inter-VLAN Routing
+* Inter-VLAN Routing via Physical Interfaces
 * Broadcast Domains
+* Gateway Configuration
+* Connectivity Verification
+* PC IP Configuration
 
 ---
 
