@@ -94,8 +94,8 @@ Throughout this journey, I will be working through Jeremy's IT Lab CCNA course w
 | Day 11.1 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-11.1-Lab-Configuring-Static-Routes.md">Configuring Static Routes</a> | ✅ Complete |
 | Day 11.2 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-11.2%20%E2%80%93Troubleshooting-Static-Routes.md">Troubleshooting Static Routes</a> | ✅ Complete |
 | Day 15 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-15-Lab-VLSM.md">VLSM & Static Routing</a> | ✅ Complete |
-| Day x | <a href="TBD"></a> | TBD   |
-| Day x | <a href="TBD"></a> | TBD   |
+| Day 16 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-16-vlans-part1.md">VLANs Part 1</a> | ✅ Complete   |
+| Day17 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-17-VLANs-Part-2%3ATroubleshooting-and-Verification.md">VLANs Part 2</a> | ✅ Complete   |
 | Day x | <a href="TBD"></a> | TBD   |
 | Day x | <a href="TBD"></a> | TBD   |
 | Day x | <a href="TBD"></a> | TBD   |
