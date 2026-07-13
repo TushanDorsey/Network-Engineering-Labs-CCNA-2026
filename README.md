@@ -95,7 +95,12 @@ Throughout this journey, I will be working through Jeremy's IT Lab CCNA course w
 | Day 11.2 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-11.2%20%E2%80%93Troubleshooting-Static-Routes.md">Troubleshooting Static Routes</a> | ✅ Complete |
 | Day 15 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-15-Lab-VLSM.md">VLSM & Static Routing</a> | ✅ Complete |
 | Day 16 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-16-vlans-part1.md">VLANs Part 1</a> | ✅ Complete   |
-| Day17 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-17-VLANs-Part-2%3ATroubleshooting-and-Verification.md">VLANs Part 2</a> | ✅ Complete   |
+| Day 17 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-17-VLANs-Part-2%3ATroubleshooting-and-Verification.md">VLANs Part 2</a> | ✅ Complete   |
+| Day 18 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-18-Multilayer-Switching%3ASVIs-and-Inter-VLAN-Routing.md">Multilayer Switching: SVIs and Inter-VLAN Routing</a> | ✅ Complete |
+| Day 19 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-19-VTP%2C-Trunking%2C-and-VLAN-Management.md">VTP, Trunking, and VLAN Management</a> | ✅ Complete  |
+| Day 20 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-20-Analyzing-STP%3APort-Roles-Across-Four-Switches.md">Analyzing STP: Port Roles Across Four Switches</a> | ✅ Complete   |
+| Day 21 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-21-Configuring-Spanning-Tree.md">Configuring Spanning Tree</a> | ✅ Complete   |
+| Day 22 | <a href="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Labs/Day-22-RSTP%3ARoot-Bridge-Behavior-and-Link-Types.md">Root Bridge Behavior and Link Types</a> | ✅ Complete   |
 | Day x | <a href="TBD"></a> | TBD   |
 | Day x | <a href="TBD"></a> | TBD   |
 | Day x | <a href="TBD"></a> | TBD   |
