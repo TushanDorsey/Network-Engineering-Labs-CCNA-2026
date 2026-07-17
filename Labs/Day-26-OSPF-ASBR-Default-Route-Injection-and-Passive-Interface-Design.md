@@ -12,7 +12,7 @@ This is the first proper OSPF lab in the series and it hits one of the most comm
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Topology.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201).png">
   </a>
 </p>
 
@@ -120,7 +120,11 @@ interface loopback0
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-R1-Interface-Config.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-1.5.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-1.4.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-1.3.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-1.2.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-1.1.png">
   </a>
 </p>
 
@@ -146,7 +150,10 @@ Loopback0           1.1.1.1     YES manual  up      up
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-R1-Show-IP-Int-Br.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-2.4.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-2.3.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-2.2.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-2.1.png">
   </a>
 </p>
 
@@ -259,7 +266,10 @@ From the R4 screenshot:
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-R4-Show-IP-Protocols.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-3.4.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-3.3.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-3.2.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-3.1.png">
   </a>
 </p>
 
@@ -298,7 +308,7 @@ The key indicator is `It is an autonomous system boundary router` — IOS confir
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-R1-Show-IP-OSPF.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-4.1.png">
   </a>
 </p>
 
@@ -367,7 +377,7 @@ O*E2 0.0.0.0/0 [110/1] via 10.0.24.1, 00:01:45, FastEthernet1/0
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-R4-Routing-Table.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-5.1.png">
   </a>
 </p>
 
@@ -419,7 +429,7 @@ R4 should also make G0/0 (LAN-facing) passive. There's no downstream router on t
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-R2-Show-IP-Route-R2.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-5.2.png>
   </a>
 </p>
 
@@ -442,7 +452,7 @@ PC1 has no directly connected Internet path. Its traffic to any off-LAN destinat
 
 <p align="center">
   <a href="PASTE-IMAGE-LINK-HERE">
-    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-PC1-IPconfig.png">
+    <img src="https://github.com/TushanDorsey/Network-Engineering-Labs-CCNA-2026/blob/main/Lab-Photos/Day-26-Lab-OSPF-(Part%201)-5.3.png">
   </a>
 </p>
 
